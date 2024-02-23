@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> <!--El navegador entiende que la pagina esta en ingles-->
+
 <head>
     <!--Aqui viene toda la configuracion de la pagina web: archivo de estilos css, referencias a arhivos externos (js)
     tamaño de la pagina, tipo de navegador -->
-    <meta charset="UTF-8"> <!--Esta instruccion permite incluir todo el set de caracteres que incluyen ñ, tildes, dieresis, emojis, caracteres especiales que se usan en el frances o portugues etc-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!--Este elemento da compatibilidad a la pagina web con navegadores antiguos; por ejemplo internet explorer-->
+    <meta charset="UTF-8">
+    <!--Esta instruccion permite incluir todo el set de caracteres que incluyen ñ, tildes, dieresis, emojis, caracteres especiales que se usan en el frances o portugues etc-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--Este elemento da compatibilidad a la pagina web con navegadores antiguos; por ejemplo internet explorer-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Esta pagina debe tener cierto ancho de pantalla (viewport) El contenido de la
         pagina debe tener el mismo ancho del dispositivo en el que se ejecute la pagina,
@@ -22,6 +25,7 @@
     traves de lo cual por ejemplo Google busca mi pagina. El SEO es muy grande y abarca
     toda una motodologia de estudio-->
 </head>
+
 <body>
     <!--En el body va todo el contenido de la pagina-->
     <!--Hay dos formas de trabajar con html: la primera es trabajar con etiquetas
@@ -32,7 +36,7 @@
         una forma de desarrollar mucha mas organizada que da una mayor claridad del
         codigo y permite localizar errores y realizar modificaciones mas facilmente-->
 
-        <!--Al instalar el Live Server aparece un boton en la parte izquierda de la
+    <!--Al instalar el Live Server aparece un boton en la parte izquierda de la
         de la barra inferior que dice: Go Live, esto es simplemente una ayuda, que
         simula un servidor como tal con una direccion IP (numeracion en la barra de
         direcciones)-->
@@ -47,17 +51,43 @@
         <h4>Esto es un titulo h4</h4>
         <h5>Esto es un titulo h5</h5>
         <h6>Esto es un titulo h6</h6>
+        <article>
+            Este elemento se usa para escribir textos muy largos por ejemplo un blog;
+            por ende internamente un articulo deberia contener varios parrafos
+            <h3>Parrafo 1</h3>
+            <p>Esto es el parrafo 1: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
+                exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
+                sequi debitis. Totam, voluptas?
+            </p>
+            <h3>Parrafo 2</h3>
+            <p>Esto es el parrafo 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
+                exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
+                sequi debitis. Totam, voluptas?
+            </p>
+            <h3>Parrafo 3</h3>
+            <p>Esto es el parrafo 3: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
+                exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
+                sequi debitis. Totam, voluptas?
+            </p>
+            <!--A diferencia de los parrafos (p) que dejan espacio arriba y abajo de ellos los
+            elementos span no lo hacen, se usa para cambiar estilos o cietos atributos (que se
+            agregan en el tag span) al texto en el interior del span-->
+            <span>La etique span se una para textos cortos</span>
+        </article>
         <section>Seccion 2</section>
         <section>Seccion 3</section>
-        
 
-        
+
+
 
     </main>
     <footer>
 
     </footer>
-    
-</body>
-</html>
 
+</body>
+
+</html>
