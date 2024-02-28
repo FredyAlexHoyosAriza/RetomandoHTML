@@ -14,6 +14,11 @@
         puesto que la escala es 1, la pagina puede adaptarse una pantalla muy grande o a
         una pantalla de smartphone. Es responsabilidad del desarrollador organizar el
         contenido para que la pagina se vea bien en cualquier pantalla-->
+    
+    <link href="./styles/styles.css" rel="stylesheet"/>
+    <!--Me permite agregar a este archivo html otro archivo; en este caso los estilos -->
+    <!--En el siguiente link se muestran que otros tipos de archivo se pueden agregar:
+    https://www.w3schools.com/tags/tag_link.asp-->
     <title>Este es el titulo</title>
     <description>
         Al buscar en Google una pagina, aparece el nombre de la pagina en azul
@@ -36,10 +41,10 @@
         una forma de desarrollar mucha mas organizada que da una mayor claridad del
         codigo y permite localizar errores y realizar modificaciones mas facilmente-->
 
-    <!--Al instalar el Live Server aparece un boton en la parte izquierda de la
-        de la barra inferior que dice: Go Live, esto es simplemente una ayuda, que
-        simula un servidor como tal con una direccion IP (numeracion en la barra de
-        direcciones)-->
+    <!--Al instalar la extension Live Server (servidor local) aparece un boton en la
+        parte izquierda de la de la barra inferior que dice: Go Live, esto es simplemente
+        una ayuda, que simula un servidor como tal con una direccion IP (numeracion en la
+        barra de direcciones)-->
     <header>
         <p>Hola mundo ñ á</p>
         <!--HTML permite tener 2 tipos de listas: ordenadas o numeradas y desordenadas-->
@@ -90,19 +95,19 @@
             Este elemento se usa para escribir textos muy largos por ejemplo un blog;
             por ende internamente un articulo deberia contener varios parrafos
             <h3>Parrafo 1</h3>
-            <p>Esto es el parrafo 1: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <p class="parrafo1 bigSizeBold">Esto es el parrafo 1: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
                 exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
                 sequi debitis. Totam, voluptas?
             </p>
             <h3>Parrafo 2</h3>
-            <p>Esto es el parrafo 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <p class="parrafo2 bigSizeBold">Esto es el parrafo 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
                 exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
                 sequi debitis. Totam, voluptas?
             </p>
             <h3>Parrafo 3</h3>
-            <p>Esto es el parrafo 3: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <p class="parrafo3 bigSizeBold" id="parrafo3">Esto es el parrafo 3: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Obcaecati, quos iste quasi amet voluptatem temporibus at ipsa odio
                 exercitationem distinctio cumque odit assumenda ratione architecto reprehenderit
                 sequi debitis. Totam, voluptas?
@@ -110,17 +115,17 @@
             <!--A diferencia de los parrafos (p) que dejan espacio arriba y abajo de ellos los
             elementos span no lo hacen, se usa para cambiar estilos o cietos atributos (que se
             agregan en el tag span) al texto en el interior del span-->
-            <span>La etique span se una para textos cortos</span>
+            <span class="spanSize">La etique span se una para textos cortos</span>
         </article>
 
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-            alt="Imagen icono de Google" /> <!--Normalmente las fotos
+            alt="Imagen icono de Google"/> <!--Normalmente las fotos
         no se guardan en la pagina web sino que se guardan en un sitio en la nube conocido como CDN (
         Content Delivery Network, p. ej. cloudynery, amazonS3, Google y Azure tienen uno propio),
         en el cual previamente se cargan las fotos, y la pagina accdete las fotos en este sitio
         usando la URL de la foto. Solo se deben usar fotos publicas (sin Copy Right)
         links de fotos: https://unsplash.com/es, https://www.pexels.com/es-es/-->
-        <img src="./media/Border_Collie.jpg" alt="Labrador Border_Collie" /> <!--Tiene siempre 2 atributos: el src que pueder ser una url o una ruta relativa
+        <img src="./media/Border_Collie.jpg" alt="Labrador Border_Collie" class="imgSize" /> <!--Tiene siempre 2 atributos: el src que pueder ser una url o una ruta relativa
                 usualmente hacia la carpeta media en el proyecto, que contiene: imagenes, iconos,
                 videos, animaciones; en general toda la multimedia. Es muy importante trabajar
                 con mucho cuidado las fotos en las pagina web. las fotos son cargadas en el

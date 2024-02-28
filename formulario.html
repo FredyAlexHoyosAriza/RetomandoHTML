@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <!--El vinculo al archivo de estilos debe estar en cada html que haga uso de estilos-->
     <title>Formulario</title>
 
     <style>
@@ -25,6 +27,8 @@
     <form>
         <!--con el valor del atributo for en label igual al valor del atributo name en input
         Google identifica que el label se relaciona con el input-->
+        <!--Como buena practica un id en el input se asocia con un for en el label;
+        vale agregar que los id deben ser unicos-->
         <label for="name">Ingrese su nombre: <input id="name" name="name" type="text" placeholder="P. ej. Dario" /></label>
         <label for="surname">Ingrese su apellido: <input id="surname" name="surname" type="text" placeholder="P. ej. Gomez" /></label>
         <label for="number">Ingrese un numero: <input id="number" name="number" type="number" placeholder="0" /></label>
