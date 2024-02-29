@@ -1,0 +1,159 @@
+p {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    color:brown
+}
+
+/* Los selectores de mayor prioridad son los selectores de id los selectores de
+elemento y de clase tienen el mismo peso. Cuando el peso del selector es el mismo,
+tiene prioridad el que este mas abajo en la secuencia de estilos incluso si
+sobreescriben dentro de un mismo selector. A no ser que se use la propiedad !important
+en frente del estilo que se desee priorizar, lo cual se rompe la jerarquia del
+CSS, por lo cual, se dice que usar !important es una practica poco recomendable.
+Solo debe usarse cuando sea estrictamente necesario; al usar librerias externas, que
+afectan de manera desconocida el codigo CSS.
+Por todo lo anterior el estandar en cuanto a CSS es usar siempre selectores de clase */
+
+/*Tiene mayor prioridad el selector de id que el selector de clase; por en ende el
+parrafo 3 es de color azul. */
+#parrafo3 {
+    color: blue;
+}
+
+.bigSizeBold {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    /*Estas fuentes deben estar disponibles en el navegador: primero se busca la
+    fuente: Arial, sino se encuentra se busca la Helvetica y por ultimo sans-serif*/
+
+    /*Para garantizar que la fuente deseada este siempre disponible, esta puede
+    enlazarse como un recurso del proyecto y de esta forma garantizar que la fuente
+    se vea igual en todos los navegadores, ya que es parte de la imagen del proyecto.
+    Muchas veces se suelen tomar los tamaños fuentes predeterminados por el navegador*/
+}
+
+.parrafo1 {
+    color:gray;
+}
+
+.parrafo2 {
+    color:black;
+}
+
+.parrafo3 {
+    color: red;
+}
+
+.imgSize {
+    /*Al modificar una sola de las propiedades ya sea el alto o el ancho, el css
+    mantiene la relacion de aspecto, pero si se modifican ambas la relacion depende
+    del desarrollador */
+    height: 200px;
+    width: 200px;
+}
+
+.spanSize {
+    /*Se debe tener especial cuidado al modificar el height y el width, ya que los
+    contenedores podrian sobreponerse unos sobre otros, por ello al inicio es
+    buena practica solo modificar uno de ambos */
+    /*Aparentemente las propiedades height y width no funcionan con el elemento span */
+    /*Lo mejor es tratar de usar tamaños lo menos posible y en lugar de ello, usar
+    las propiedades margin y padding */
+    height: 15px;
+    width: 200px;
+    color: green;
+}
+
+.contenedorConMargen {
+    /* El margin es el espacio desde el borde del contenedor del elemento actual
+    hasta el limite interior del contenedor externo que lo contiene */
+    margin: 10px; /*Se aplica el margen: arriba, abajo, izquierda y derecha */
+    margin: 10px 100px; /*Se aplican 10px arriba, abajo y 20px derecha, izquierda */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 2px solid black;
+    /*El padding es el espacio desde el borde del hasta el contenido del contenedor */
+    padding: 40px;
+
+    /*Al inspeccionar una pagina web si selecciona un contenedor que posea margin y
+    padding, al margin se colorea naranja, el padding verde, y el espacio para el
+    contenido del elemento azul */
+
+    /*En palabras del profe el padding y el margin se usan para definir la ubicacion
+    de un elemento dentro de la pagina*/
+}
+
+/*Los tres tipos de display son: block, flex y grid */
+.divTest {
+    border: 1px solid red;
+    /*display: block; Toma todo el espacio disponible (arriba, abajo, izquierda, 
+    derecha) del contenedor; todo el alto y el ancho*/
+    height: 50px;
+}
+
+.contenedorDivsGrid {
+    border: 2px solid blue;
+    /*De esta forma todos los elementos en este contenedor seran elementos de grilla*/
+    /*Los elementos en el grid se organizan de izquierda a derecha y de arriba abajo */
+    display: grid; /*Es muy util para mostrar elementos html en formato tipo tabla;
+    aunque tambien html tiene una tabla predeterminada */
+    /*De manera predeterminada los hijos de un contenedor tipo grid son tipo block */
+    /*Los elementos en este contenedor necesariamente deben estar organizados en 4
+    columnas de 150 px de ancho cada una*/
+    grid-template-columns: 150px 150px 150px 150px;
+    /*De igual manera los elementos de este contenedor pueden organizarse en 2
+    filas de 20px, 40px respectivamente*/
+    grid-template-rows: 30px 40px;
+
+    /*Es recomendable solo usar unidades fijas o absolutas, como los: px, cm, mm,
+    in, px *, pt o pc, cuando sea necesario,
+    de lo contrario se deben usar unidades relativas (en porcentajes o proporcionales).
+    Estas unidades son muy utiles para que la pagina sea responsive.
+    Mas informacion en: https://www.w3schools.com/cssref/css_units.php
+    Algunos de los tipos de unidades disponibles en CSS son: */
+
+    /*display: grid; tambien cuenta con opciones para justificar o dar formato a su
+    contenido; al igual que con display: flex;*/
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 20px;
+}
+
+.contenedorDivsFlex {
+    border: 2px solid green;
+    display: flex;
+    /*De manera predeterminada los hijos de un contenedor tipo flex son inline; cada
+    uno de los hijos o elementos ocupa solamente el espacio que su contenido necesita,
+    Por lo cual el tamaño lo define el contenido*/
+    /*Usualmente se usa sobretodo display: flex; para realizar la maquetacion de la pagina web */
+
+    /*Tambien se puede establecer una organizacion vertical u horizontal (predeterminado)*/
+    /*flex-direction: column-reverse;*/
+    flex-direction: row-reverse;
+    height: 500px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#name {
+    padding: 5px;
+}
+
+/*Usualmente para el desarrollo se usan 3 ramas minimas: main, development y release.
+Development pueder no ser una rama sino 3: development sprint 1, development sprint 2 y development sprint 3.
+A su vez, cada sprint debe tener una rama para cada tarea del sprint, las tareas se dividen entre los
+desarrolladores disponibles; cada desarrollador debe saber cuales son sus ramas (tareas). Por lo cual, cada
+persona realiza su codigo hace sus commits, que luego pasa al development sprint correspondiente y
+al final del sprint se pasa (se hace un merge) al main. Y luego cuando se tengan listos todos los sprints,
+entonces, se hace un merge de la rama main con la rama release. El codigo en la rama release es el que se
+despliega; se monta en el servidor, etc. */
+
+/*A traves de un formulario se guarda informacion en la base de datos que luego se trae a la apliacion web
+de gestion de ventas, la cual se encarga de realizar los procesos solicitados en el reto */
