@@ -7,6 +7,9 @@ ul {
     justify-content: space-between;
     padding: 20px;
     margin: 0px;
+    background-color: rgb(180, 214, 216);
+    border-bottom: 1px solid gray;
+    align-items: center;
 }
 
 body {
@@ -68,4 +71,54 @@ siendo esto una buena practica que nos permite actualizar el codigo de forma sen
 .buscar > input {
     border: 0; /*Cuadro de texto sin borde */
     outline: none; /*Cuando el cursor este sobre el cuadro de texto no se vera el contorno */
+    width: 20em;
+}
+
+.menuCards {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0.2em 0.2em 0.1em rgb(201, 233, 180);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.1em;
+    border-bottom-right-radius: 0.1em;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card > img {
+    width: 10em;
+    height: 10em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border: 1px solid gray;
+    /* Se ajusta el contenido al tamaño del padre */
+    /* width:fit-content; */
+    /* object-fit: cover; */
+}
+
+.card > label {
+    padding: 0.1em 0;
+    color: white;
+    background-color: #0f2f09;
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 0.1em;
+    border-bottom-right-radius: 0.1em;
+}
+
+section > h1 {
+    text-align: center;
 }
