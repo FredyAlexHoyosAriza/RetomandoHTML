@@ -7,6 +7,9 @@ ul {
     justify-content: space-between;
     padding: 20px;
     margin: 0px;
+    background-color: rgb(180, 214, 216);
+    border-bottom: 1px solid gray;
+    align-items: center;
 }
 
 body {
@@ -68,4 +71,27 @@ siendo esto una buena practica que nos permite actualizar el codigo de forma sen
 .buscar > input {
     border: 0; /*Cuadro de texto sin borde */
     outline: none; /*Cuando el cursor este sobre el cuadro de texto no se vera el contorno */
+    width: 20em;
+}
+
+.menuCards {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card > img {
+    width: 10em;
+    height: 10em;
+    /* object-fit: cover; */
+    /* Se ajusta el contenido al tamaño del padre */
+    /* width:fit-content; */
 }
